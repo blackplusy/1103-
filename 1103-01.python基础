@@ -1,0 +1,47 @@
+HeyGor
+QQ:  914338492
+TEL: 18028768679
+=====================
+1.python的应用领域
+	房产推荐系统
+	a.爬虫--[58、链家、中原]--【周边、光线、朝向、价格、楼层、评价】
+	b.数据分析--[分析大部分人的需求]--【光线、地理位置、价格】
+	c.web网站--[VIP]--【验证码、wechat、QQ】
+	d.行为分析--[分析单个用户需求]--推荐
+	e.自动化测试
+	f.自动化运维
+
+	a.爬虫         13k  
+	b.数据分析     13k
+	c.web网站      10-13k
+	d.机器学习     18k
+	e.自动化测试   13k
+	f.自动化运维   8-13k
+2.python的安装
+	a.操作系统类型
+		unix
+		linux
+		windows
+	b.操作系统位数
+		x86     32位操作系统
+		x86_64  64位操作系统
+	c.python版本
+		https://www.python.org/
+	d.注意
+		Add Python To PATH(打勾)
+3.python的开发工具
+	a.python idle
+	b.pycharm 
+	c.eclipse+pydev
+	d.sublime text
+	e.vi/vim 
+4.python的运行环境
+	a.IDE开发环境
+	b.win+r--cmd--python
+	c.win+r--cmd--python 文件名
+
+
+
+
+
+
