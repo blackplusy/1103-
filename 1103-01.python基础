@@ -39,7 +39,30 @@ TEL: 18028768679
 	a.IDE开发环境
 	b.win+r--cmd--python
 	c.win+r--cmd--python 文件名
-
+5.python的输入和输出
+	输出的应用场景
+		a.taobao上返回的搜索内容
+		b.访问网页不存在(404)
+		c.调试程序时候进行输出
+		d.网站提示输入用户名、输入密码
+	输入的应用场景
+		a.填写注册信息
+		b.taobao搜索栏中输入的信息
+		c.前后端交互
+	python的输出
+		a.直接输出
+		b.变量输出
+		c.函数输出
+		d.格式化输出
+	python的输入
+		a.input
+			python2中接受键盘输入的数字信息，python3中接受键盘输入的字符信息
+		b.raw_input
+			python2中接受键盘输入字符串信息，python3中已经废弃
+		c.查看和转换数据类型
+			type()  查看数据类型
+			int()   转换数据为数字类型
+			str()   转换数据为字符类型
 
 
 
