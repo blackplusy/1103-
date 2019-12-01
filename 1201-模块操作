@@ -60,4 +60,16 @@
 		o8ma   110
 		判断110 是否存在于文件中
 		如果说调试数据时候有回车符，使用字符串.strip()来去掉回车符
+	e.csv文件操作
+		e1.csv文件是什么
+			逗号分隔值，文件以纯文本形式存储表格数据
+			使用python处理excel文件需要导入excel模块(csv)
+		e2.csv文件的读写
+			csv文件写的时候生成的excel兼容csv的话必须要有个参数
+			dialect='excel'
+	f.excel文件的操作
+		f1.安装openpyxl
+			pip install openpyxl
+			
+
 
