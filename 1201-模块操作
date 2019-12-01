@@ -70,6 +70,52 @@
 	f.excel文件的操作
 		f1.安装openpyxl
 			pip install openpyxl
+3.python操作数据库常用模块
+	a.常见的数据库
+		mysql      开源(大部分免费)
+		oracle     中大型企业
+		mongodb    大数据
+	b.数据库的安装
+		b1.下载安装mysql官方的包
+			https://dev.mysql.com/downloads/
+		b2.使用集成环境
+			wamp
+				w:windows
+			phpstudy
+			xampp
+				x:任意操作系统
+				a:apache
+				m:mysql
+				p:php
+				p:perl
+		b3.phpstudy环境简介
+			apache(web服务器)
+				bin     存放命令
+				conf    存放配置文件
+				logs    存放日志
+				httpd.conf  apache的配置文件
+			mysql(数据库服务器)
+				bin     存放命令
+				data    存放数据
+				lib     存放库文件
+				my.ini  mysql的配置文件
+			www文件夹(存放项目代码的位置)
+	c.数据库的基础
+		c1.mysql的管理员
+			root
+		c2.mysql的端口
+			3306
+		c3.查询数据
+			select 列 from 表  where 条件;
+	d.python操作mysql数据库
+		d1.安装pymysql模块
+			1>pip install pymysql
+			2>通过源码包安装
+		d2.python操作mysql
+			数据库必须有相应的授权才能够进行访问
 			
+
+
+
 
 
