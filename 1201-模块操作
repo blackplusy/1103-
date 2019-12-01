@@ -70,6 +70,11 @@
 	f.excel文件的操作
 		f1.安装openpyxl
 			pip install openpyxl
+	g.word文件操作
+		https://pypi.org/project/python-docx/
+		安装docx
+		https://python-docx.readthedocs.io/en/latest/
+		
 3.python操作数据库常用模块
 	a.常见的数据库
 		mysql      开源(大部分免费)
@@ -113,7 +118,7 @@
 			2>通过源码包安装
 		d2.python操作mysql
 			数据库必须有相应的授权才能够进行访问
-			
+
 
 
 
