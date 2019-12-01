@@ -1,0 +1,34 @@
+1.模块
+	a.模块定义
+		python中的模块就是一个以py结尾的文件
+		可以把一个复杂程序按照功能分开，分别放在不同文件中使用
+		公共模块存放在python的安装目录下的Lib中
+	b.模块的使用方法
+		1>模块导入方法
+			import 模块
+			from 模块 import xx
+			from xxx import *
+			from xxx  as xxxx
+2.os模块
+	模块式系统自带，使用前必须进行导入
+3.sys模块
+	sys.version    当前python的版本号
+	sys.path       python的环境变量
+4.模块的安装
+	建议:搜索模块时候找pypi
+	a.单文件模块
+		安装方法：
+		直接拷贝文件到指定目录$python_dir/Lib
+	b.多文件模块
+		安装方法：
+		1>下载模块压缩包
+		2>解压压缩包
+		3>命令提示符中进入到解压后的目录执行python setup.py install 
+		补充:.tar.gz通常是linux中的文件压缩
+	c.easy install 方式
+		easy install 包名字
+		easy install 包.egg
+	d.pip方式
+		系统中已经安装好pip，也已经设置好环境变量
+		pip install docx
+		墙裂建议:不要升级pip
