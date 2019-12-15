@@ -96,5 +96,65 @@
 		多态:多种形态，一个方法能表现出不同的形态，同一操作方法针对不同对象，有不同解释，产生不同的结果
 	b.多态例子
 		+：多态
-		
+
+12.装饰器(猴子补丁)
+	在不修改原有代码情况下给函数赋予新功能
+	例子:
+	银行转账
+		rich-------转账------heygor
+		1.rich账户中减少金额
+			增加写入日志功能(记录什么时间，哪个账户，什么操作)
+		2.heygor用户中增加金额
+			增加写入日志功能(记录什么时间，哪个账户，什么操作)
+13.异常处理
+	a.异常的概念
+		程序执行过程中发生影响程序正在执行的时间，当python无法正常处理时候产生异常
+		异常是python中的ige对象，表示一个错误
+		捕获异常:为了防止python程序终止，当脚本发生异常时候需要捕获
+	b.常见的异常
+		1>NameError
+			没有定义变量就直接使用
+			p
+		2>SyntaxError
+			语法错误
+			if a
+		3>IO Error
+			FileNotFoundError
+			p=open('aaa.txt','r')
+		4>ZeroDvisionError
+			除数为0
+			10/0
+		5>valueError
+			int('d')
+	c.异常的处理方式
+		1>try...except
+			有可能发生错误的代码放在try和except中间
+		2>try....except...else
+			语法:
+			try:
+				代码
+			except:
+				代码
+			else:
+				代码
+				#如果没有报错可以执行其他操作
+		3>try...finally..
+			语法:
+			try:
+				代码
+			finally:
+				代码
+				#如果没有捕获到异常，代码正常执行
+				#如果捕获到异常，先执行这段代码，后处理异常,  无论如何都会执行finally下面代码
+		4>try...except...finally
+			语法：
+			try：
+				代码
+			except：
+				代码
+			finally:
+				代码
+				#如果try没有捕获到异常，执行finally语句
+				#try捕获到了异常，显示出异常，再执行finally
+			
 
