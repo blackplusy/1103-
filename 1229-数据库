@@ -114,10 +114,24 @@ b.非关系型数据库
 			查看当前数据库中有哪些表
 		select * from user\G
 			查询user表中所有的数据
-
-
-
-
-
-
+	d.表结构
+		d1.数据类型
+			字符类型  'abc'  char varchar
+			数字类型  123 1.23  int 
+			日期类型  '2018-01-01'  date
+		d2.表结构的创建
+			语法:create table 表(
+				列名\字段\表头   数据类型,
+				列名            数据类型,
+				。。。。
+			);
+			需求:创建商品表(goods),商品名称(name)字符类型,商品价格(price)数字类型，出厂日期(ddate)日期类型
+			create table goods(
+				name char(10),
+				price int,
+				ddate date
+			);
+		d3.查看表结构
+			语法: desc 表结构;
+		
 
