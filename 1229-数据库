@@ -52,9 +52,69 @@ b.非关系型数据库
 					my.ini   mysql的配置文件
 			WWW
 				web项目代码存放位置
+4.mysql基础
+	a.mysql的服务
+		mysql是c/s架构软件
+			c/s 架构
+			c:客户端
+			s:服务器
+		mysql的服务:
+			mysqld   mysql的主服务
+			mysql    mysql的客户端服务
+		mysql的端口:
+			3306
+		端口和服务的检查:
+			win+r--cmd(打开命令提示符)
+			a1.检查进程
+				tasklist | find "mysqld"  查看mysqld进程是否正常运行
+				tasklist   查看系统中所有进程
+				|          管道：前面的输出作为后面的输入
+				find       搜索
+				mysqld     mysql的服务
+			a2.检查端口
+				端口:区分应用层进程的标识
+				(OSI参考模型、TCP/IP参考模型、TCP和UDP、TCP链接和断开链接)
+				netstat -an | find "3306"
+				netstat -an 查看系统中开放的所有端口
+			a3.补充
+				127.0.0.1==localhost==电脑本机
+				0.0.0.0  任意IP
+	b.mysql的登陆
+		b1.登陆命令(命令提示符)
+			mysql
+				登陆本地数据库
+			mysql -u root -p
+				管理员登陆本地数据库
+			mysql -h 127.0.0.1 -u root -p
+				管理员登陆IP地址为127.0.0.1的数据库
+			mysql的管理员
+				root
+		b2.登陆方式
+			1>进入到命令所在目录执行
+				d:
+				cd phpStudy\MySQL\bin
+			2>设置环境变量(让系统能找到命令所在位置)
+				计算机--属性---高级---环境变量---系统变量---Path中添加mysql的bin的路径
+				;D:\phpStudy\MySQL\bin
+				确定--确定--确定
+				注意:设置完环境变量后一定要重启命令提示符生效
+	c.mysql基础
+		数据库是由数据软件和数据库数据
+		常说的数据库是数据库数据
+		数据库是由表组成的
+		表是由数据组成的
+		补充：null 代表空，没有任何数据
+		show databases; 
+			查看当前有哪些数据库
+		select database();
+			查看当前数据库的名字
+		use mysql;
+			数据库切换为mysql
+		show tables;
+			查看当前数据库中有哪些表
+		select * from user\G
+			查询user表中所有的数据
 
-
-http://192.168.4.159:88/
 
 
 
