@@ -226,7 +226,44 @@ b.非关系型数据库
 		truncate table 表;
 		需求:删除goods表中所有数据
 			truncate table goods;
-			
+	j.数据的查询
+		j1.查询的分类
+			简单查询
+			多表查询
+			分组查询
+			子查询
+		j2.简单查询
+			select 列 from 表 where 条件;
+			select后面from前面是和列相关的
+			where条件是和行相关的
+			ecshop表结构说明：
+				https://blog.csdn.net/weixin_37678117/article/details/81192245
+			查询指定列数据
+				需求:查询ecs_goods表中所有商品名称
+				select goods_name from ecs_goods;
+			查询指定行数据
+				需求:查询ecs_goods表中商品名称是KD876的所有信息
+				select * from ecs_goods where goods_name='KD876';
+			查询指定行的列的数据
+				需求:查询ecs_goods表中商品名称是诺基亚E66的本店售价
+				select shop_price from ecs_goods where goods_name='诺基亚E66';
+			查询所有数据
+				需求:查询ecs_goods表中所有数据
+				select * from ecs_goods;
+
+		j3.补充(ecshop项目部署)
+			http://192.168.4.159:88/ecshop1.zip
+			1>解压ecshop1压缩包
+			2>复制解压好的压缩包到phpstudy的WWW文件夹中
+			3>浏览器中输入127.0.0.1/ecshop1按照提示安装
+			4>数据库配置
+				主机 localhost
+				端口 3306
+				用户名 root
+				密码   root
+				数据库名 test
+
+
 
 
 
