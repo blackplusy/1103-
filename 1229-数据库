@@ -1,0 +1,63 @@
+1.常见的数据库平台
+a.关系型数据库
+	informix 军、政、运、银  IBM+HP 小机
+	db2      军、政、运、银  IBM 
+	oracle   中大型   
+	mysql    互联网公司
+	sqlserver 传统
+b.非关系型数据库
+	mongodb   大数据、爬虫
+	redis     缓存、验证、消息队列
+	cassandra facebook
+2.网站后端组成
+	操作系统
+		unix
+		linux
+		windows
+	web服务器(提供网页服务)
+		apache
+		tomcat 
+		nginx
+		iis
+	数据库服务器(提供数据)
+		oracle
+		mysql
+		sqlserver
+	集成软件
+		xampp
+			x:任意操作系统
+			a:apache
+			m:mysql
+			p:php
+			p:perl
+		wamp
+		phpstudy
+3.mysql的安装
+	a.官网下载安装
+		https://dev.mysql.com/downloads/mysql/
+	b.集成工具(phpstudy)
+		b1.下载
+			建议phpstudy2016
+			安装:傻瓜安装
+		b2.phpstudy目录结构
+			apache
+				bin 	 存放命令
+				conf     存放配置文件
+					httpd.conf  apache的主配置文件
+				logs     存放日志
+			mysql
+				bin      存放mysql命令
+				data     存放数据的位置
+				lib      存放库文件的位置
+					my.ini   mysql的配置文件
+			WWW
+				web项目代码存放位置
+
+
+
+
+
+
+
+
+
