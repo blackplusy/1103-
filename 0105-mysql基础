@@ -94,3 +94,75 @@ update test1 set department='信息学院' where department='计算机系';
 select t1.no,t1.name,t2.grade,t2.courses  from test1 t1,test2 t2
 where t1.no=t2.no
 and t2.grade>=75;
+2.左联查询和右联查询
+左联、右联区别:左联左表中所有数据都有
+create table a(
+	a int
+);
+insert into a values(1),(2),(3);
+
+create table b(
+	a int,
+	b char(2)
+);
+insert into b values(1,'a'),(2,'b'),(4,'d');
+
+
+
+左联：
+	select 列 from 左表 left join 右表 on 左表.列=右表.列;
+	结果:内联查询结果+左表中有，右表中没有得右表显示为空
+	select * from a;
+	select * from b;
+	select * from a,b where a.a=b.a;
+	select * from a left join b on a.a=b.a;
+右联：
+	select 列 from 左表 right join 右表 on 左表.列=右表.列;
+	select * from b right join a on a.a=b.a;
+=================================================================
+2.子查询
+一条SQL语句的执行依赖于另外一条SQL语句的执行结果
+子查询可以用于数据的新增、修改、删除中
+需求:查询商品名称是KD876的分类名称
+a.分析列
+	goods_name
+	cat_name
+b.分析表
+	ecs_goods
+	ecs_category
+c.拆分
+	查询ecs_goods表中满足条件的cat_id
+	select cat_id from ecs_goods where goods_name='KD876';
+	查询ecs_category表中cat_id为上面查询出来结果的cat_name
+	select cat_name from ecs_category where cat_id=(select cat_id from ecs_goods where goods_name='KD876');
+--2.jpg
+3.insert into achievement values((select id from student where name='Robert'),80);
+4.update achievement set mark=87 where id=(select id from student where name='Rose');
+5.
+  delete from achievement where id=(select id from student where name='Betty');
+  delete from student where name='Betty';
+子查询分为单行子查询和多行子查询
+	单行子查询：查询子句返回的结果只有一个，可以用=或者in
+	多行子查询：查询子句返回的结果有多个，可以用in，all，any
+需求:
+	查询本店售价范围是2000和3000之间的分类名称
+	查询ecs_goods表中满足条件的cat_id
+	select cat_id from ecs_goods where shop_price between 2000 and 3000;
+	查询ecs_category表中cat_id为上面查询出来的分类名称
+	select cat_name from ecs_category where cat_id in (select cat_id from ecs_goods where shop_price between 2000 and 3000);
+
+
+3.sakila数据库的导入
+	a.官网下载sakila数据库
+		https://dev.mysql.com/doc/index-other.html
+	b.解压sakila数据库压缩包
+	c.进入到sakila解压后的文件夹
+	d.进入到命令提示符
+	e.登陆mysql
+		mysql -u root -p
+	f.导入表
+		source sakila-schema.sql;
+	g.导入数据
+		source sakila-data.sql;
+		
+
