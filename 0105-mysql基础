@@ -1,0 +1,51 @@
+1.多表查询
+当一张表中数据无法满足条件得使用使用多张表
+a.笛卡尔积
+select * from ecs_goods;
+select * from ecs_category;
+select * from ecs_goods,ecs_category;
+两张表不做任何关联产生得数据，数据量成倍增加，无效数据增加，为了避免此类情况，引入内联查询、左联查询、右联查询
+b.内联查询
+语法:
+select 列 from  表1,表2 where 表1.列=表2.列;
+select 列 from 表1 inner join 表2 on 表1.列=表2.列;
+关联列判断方法
+名字相同
+作用相同
+主外键关系
+需求:查询商品名称是KD876得分类名称
+a.分析列
+	商品名称
+	分类名称
+b.分析表
+	goods_name  ecs_goods
+	cat_name    ecs_category
+c.关联
+	select * from ecs_goods,ecs_category
+	where ecs_category.cat_id=ecs_goods.cat_id;
+d.过滤
+	select cat_name from ecs_goods,ecs_category
+	where ecs_category.cat_id=ecs_goods.cat_id
+	and goods_name='KD876';
+
+需求：查询商品分类名称是3G手机得商品名称、本店售价有哪些？
+a.分析列
+	分类名称
+	商品名称
+	本店售价
+b.分析表
+	ecs_goods
+	ecs_category
+c.关联
+	select * from ecs_goods g,ecs_category c
+	where g.cat_id=c.cat_id;
+d.过滤
+	select g.goods_name,g.shop_price from ecs_goods g,ecs_category c
+	where g.cat_id=c.cat_id
+	and cat_name='3G手机';	
+
+
+
+
+
+
