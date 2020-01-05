@@ -231,6 +231,18 @@ b.分组查询
 	select   cat_id,goods_name,max(shop_price),min(shop_price) from ecs_goods
 	group by cat_id,goods_name;
 
+查询每个国家有多少个城市,要求显示国家名称,城市数量?
 
+
+
+查询每个城市有多少个客户,要求显示城市名称,客户数量(计算客户id)
+
+
+
+查询C开头的国家,每个国家有多少个城市
+
+
+
+城市数量超过30的国家名称
 
 
